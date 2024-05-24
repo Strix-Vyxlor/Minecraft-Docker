@@ -1,0 +1,13 @@
+
+#General Settings
+[general_settings]
+
+	#Storage Box Settings
+	[general_settings.strorage_box_settings]
+		#Sets how many ticks pass before Storage Boxes Update their block count and Block States. More = better performance
+		storage_box_update_time = 10
+		#How much fuel is used per tick while flying
+		jetpack_fuel_depletion_amount = 0.011
+		#BackPack Magnet Range (In Blocks)
+		backpack_magnet_range = 5
+

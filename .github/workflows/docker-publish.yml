@@ -9,11 +9,6 @@ on:
   push:
     branches: [ "master" ]
 
-env:
-  # Use docker.io for Docker Hub if empty
-  REGISTRY: ghcr.io
-
-
 jobs:
   build:
 
@@ -59,6 +54,6 @@ jobs:
         with:
           context: .
           push: true
-          tags: strix-vyxlor/minecraft-docker:master-jdk21
+          tags: Strix-Vyxlor/minecraft-docker:master-jdk21
           target: openjdk21
           platforms: linux/amd64, linux/arm64

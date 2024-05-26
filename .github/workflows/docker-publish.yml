@@ -54,6 +54,6 @@ jobs:
         with:
           context: .
           push: true
-          tags: Strix-Vyxlor/minecraft-docker:master-jdk21
+          tags: strix-vyxlor/minecraft-docker:master-jdk21
           target: openjdk21
           platforms: linux/amd64, linux/arm64

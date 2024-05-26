@@ -18,16 +18,16 @@ if sys.argv[1] not in ["21", "17", "11"]:
     exit()
 jdk = sys.argv[1]
 
-if sys.argv[2] not in ["arm64/v8", "amd64"]:
+if sys.argv[2] not in ["arm64", "amd64"]:
     print("supported arch: arm64/v8, amd64")
     exit()
 
-arch = "arm64" if sys.argv[2] == "arm64/v8" else "amd64"
+arch = sys.argv[2]
 
 subprocess.run(["docker", "buildx", "build",
             "--tag", f"minecraft-docker:latest-jdk{jdk}-{arch}",
             "--target", f"latest-jdk{jdk}",
-            "--platform", f"linux/{sys.argv[2]}",
+            "--platform", f"linux/{arch}",
             "--builder", "minecraft",
             "--load", "."])
 

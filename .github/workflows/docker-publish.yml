@@ -72,5 +72,6 @@ jobs:
           tags: strix-vyxlor/minecraft-docker:master-jdk21
           target: openjdk21
           platforms: linux/amd64, linux/arm64
+          labels: ${{ steps.meta.outputs.labels }}
           cache-from: type=gha
           cache-to: type=gha,mode=max

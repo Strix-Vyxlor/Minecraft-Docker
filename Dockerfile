@@ -1,4 +1,4 @@
-FROM alpine:latest as latest-jdk21
+FROM alpine:latest as openjdk21
 
 RUN apk update
 RUN apk upgrade
@@ -11,7 +11,7 @@ EXPOSE 25565
 WORKDIR /server
 ENTRYPOINT ash ./run.sh
 
-FROM alpine:latest as latest-jdk17
+FROM alpine:latest as openjdk17
 
 RUN apk update
 RUN apk upgrade
@@ -24,7 +24,7 @@ EXPOSE 25565
 WORKDIR /server
 ENTRYPOINT ash ./run.sh
 
-FROM alpine:latest as latest-jdk11
+FROM alpine:latest as openjdk11
 
 RUN apk update
 RUN apk upgrade

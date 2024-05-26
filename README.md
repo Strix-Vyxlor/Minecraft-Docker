@@ -6,7 +6,7 @@ can be build for amd64 and arm64.
 
 ## Using
 
-~~~docker run -v minecraft:/server -p 25565:25565 {image here}~~~
+```docker run -v minecraft:/server -p 25565:25565 {image here}```
 
 ## Building
 
